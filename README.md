@@ -18,7 +18,7 @@ So pen down the solution is very important there are ways through which we can d
 
 __Q2 What exactly the flow chart is ?__
 
-![Flow chart definition](../Python-with-DSA/assets/flow%20chart%20definition.png)
+![Flow chart definition](./assets/flow_chart_definition.png)
 
 Flow Charts Other Benefits :
 
