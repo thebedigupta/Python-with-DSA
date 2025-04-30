@@ -325,3 +325,73 @@ Example below
 
 ![logical Operator](./assets/short%20circuit%20example%202.png)
 
+__Note :__ We have same concept for AND or OR Opearator. See OR Operator Example Below 
+
+![Logical Opearator Example 2](./assets/Short%20Circuit%20Example%203.png)
+
+With OR Operator it only check first condition and if already false then it only check second Condtion not going to check third condition as show above.
+
+__Note : In Python Logical Opearator is short circuited__
+
+6. __Chaining Comparsion Opearator__
+
+Let's Try to Understand with Example :
+
+```
+#age should be between 18 and 65
+
+Without Chaining Method
+
+age = 22
+if age >= 18 and age < 65:
+  print ("Eligible")
+
+With Chaining Method
+
+age = 22
+if 18 <= age < 65:
+print("Eligible")
+```
+7. __For Loops__
+
+As you know for loops help repeat the task " N " times.
+
+Example:
+
+```
+if number in range(3): // this statement help in printing "Attempt 3 times"
+print("Attempt")
+
+Note : Range is the built in function.
+```
+__You might be thinking what is the number here number automatically consider himself "0" and it start from zero and increases with attempt__ and as you would see 3 is not included here.
+
+A. You can also pass two arguments.
+
+![For loop example one](./assets/For%20loop%20example%201.png)
+
+__In the above shown image first argument tells start from there and second arguments tell end before here__
+
+B. You can also pass third arguments.
+
+![For loop Example Two](./assets/For%20loop%20example%202.png)
+
+Result of the above image
+
+![Result of the third argument](./assets/For%20loop%20example%203.png)
+
+__Inside python Range(start from, End Here, Step )__
+
+8. __For ..Else__
+
+Understand this with previous example
+
+```
+sucessful = True
+
+for numbers in range(3):
+    print("Attempt")
+    if sucessful:
+      print("Sucessful")
+        break
+```
