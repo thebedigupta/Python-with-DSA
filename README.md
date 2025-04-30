@@ -71,9 +71,3 @@ Flow chart for the above question
 
 ![Number is even or odd](./assets/Divisible%20by%202%20or%20not.png)
 
-```
-Example:Find Largest of 3 N umbers
-
-Step 1: Take input three numbers as a input and store 
-Step 2: 
-```
