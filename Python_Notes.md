@@ -1,5 +1,14 @@
 # Quick Notes of Python
 
+|S.No | Column 2    | Column 3 |
+| --- | ----------- | -------- |
+| 0   | [Flow Charts Notes](./notes/flow_charts_notes.md) | Done  |
+| 1   | Basic setup | Skipped  |
+| 2   | Control Flow | Done    |
+| 3   | [Functions](./notes/functions.md)  | Done    |
+
+0. [Flow Charts Notes](./notes/flow_charts_notes.md)
+
 1. __Convention for giving variables a name__
 
 * First Letter of any word must be smaller.
@@ -387,11 +396,95 @@ __Inside python Range(start from, End Here, Step )__
 Understand this with previous example
 
 ```
-sucessful = True
+sucessful = false
 
 for numbers in range(3):
     print("Attempt")
     if sucessful:
       print("Sucessful")
-        break
+      break
+else:
+print("I tried 3 times but failed")
 ```
+This above expression tells he is tried 3 time but failed when boolen value is false and that algorithm we called as for else algorithm.
+
+9. __Nested Loops__
+
+![Nested Loop Example](./assets/Nested%20loop%20example.png)
+
+When x start executing then y holds until y complete its 3 iteration. That's why when x is 0 and reached to the y then y hold it and not go until y complete it's three iteration thus output shown like that in the left side.
+
+10. __Iterables__
+
+```
+Whenever we have to check any data type in python that's how we can see
+
+print(type(5))   // output  <class 'int'>
+```
+Now let's look the type of the range()
+
+```
+print(type(range(5)))  // Output <class 'range'>
+```
+range is also one of the complex types and what is interesting about range object is it's iterable.
+
+```
+#Iterable
+
+for x in 'range(5)':
+for x in  'Python':
+print(x)   // Each time when iteration happen x is carry one word of string python.
+```
+![iterable example](./assets/iterable%20example.png)
+
+Range Object are not the only to iterable in python strings are also iterable in each iterable each time it carries one string as shown above we have another complex type __called Lists__. Square brackets indicates the lists ```[]```.
+
+![Lists example](./assets/Lists%20Example.png)
+
+As you can see we can iterate over list and and in each iteration we get object in this list.
+
+__Later In the Course we will learn how to create our own coustom objects and make it iterable__
+
+![Coustom Objects](./assets/Coustom%20Objects.png)
+
+In the above example you can see coustom Object(i.e shopping_cart) and each time when for loop run it iterate one item from the shopping_cart coustom object.
+
+11. __While Loop__
+
+While loop is more like a for loop it is not stop until a required condition true.
+
+```
+number = 100
+
+while number > 0 :
+   print(number)
+   number //= 2 [number = number // 2 (half the number)]
+
+
+// Output 100,50,25,12,6,3,1
+```
+Let me show you behind the scene use of while loop :
+
+As you know when you are running in a python shell then there is a only oneway to exit from there and that is __Ctrl + D__  as shown below image here maybe while loop is running in the background to check if the user is pressed these buttons or not. If user pressed these buttons then user exit from python shell interpreter.
+
+![While Loop Example](./assets/While%20loop%20exmaple%202.png)
+
+Now, let's see the behind the scene thing
+
+```
+Here we have to write a program where user have to write quit for exit.
+
+command = ""
+while command.lower() != "quit":
+  command = input('>')
+  print('ECHO',command)
+```
+12. __Infinte Loop__
+
+An Infinite loop is the loop that runs forever.
+
+![Infinte Loop](./assets/Infinte%20loop.png)
+
+Control flow complete ️✅
+
+From Here if you wanted to read further then go and continue from Content of table while tapping to the link.
