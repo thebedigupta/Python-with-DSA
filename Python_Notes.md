@@ -6,6 +6,7 @@
 | 1   | Basic setup | Skipped  |
 | 2   | Control Flow | Done    |
 | 3   | [Functions](./notes/functions.md)  | Done    |
+| 4   | [Data Structures](./notes/data_structures.md) | Done |
 
 0. [Flow Charts Notes](./notes/flow_charts_notes.md)
 
