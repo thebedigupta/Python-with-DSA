@@ -164,3 +164,123 @@ if 'd' in letters:
 ```
 ## 7. Sorting Lists
 
+__(A) Sort__
+
+Let's try to understand this :
+
+* I want to sort these numbers
+
+```
+numbers = [3,51,2,8,6]
+numbers.sort()  // It gives new sorted list never modified the original one
+print(numbers) // Output [2,3,6,8,51] Ascending Order
+```
+* Sort in Decending Order
+
+```
+numbers = [3,51,2,8,6]
+numbers.sort(reverse=True) // It gives new sorted list never modified the original one
+print(numbers)             // Output [51,8,6,3,2] Decending Order
+```
+__(B) Sorted__
+
+```
+numbers = [3,51,2,8,6]
+print(sorted(numbers)) // Output [2,3,6,8,51]
+```
+
+__Note: In this method the sorted list that you get is modified not generate new one__
+
+* You can also reverse this:
+
+```
+numbers = [3,51,2,8,6]
+print(sorted(numbers, reverse=true))
+print(numbers)         // Output [51,8,6,3,2] Decending Order
+```
+Now what we have to do when there are real complex numbers like shown below:
+
+```
+items = [ ("Product1",10) ("Product2",9) ("Product3",12) ]
+
+def sort_item(item):
+return item[1]
+
+items.sort(key=sort_item)
+print(items)
+```
+## 8. Lambda Functions
+
+It is simple one line anonymous function that we can pass to other function.
+
+Let's try to understand this with example
+
+In the above example we pass another function as an argument which increases the line of code now we are going to look another way of writing it which decreases the line of code.
+
+```
+items = [('Product1',10) ("Product2",9) ("Product3",12)]
+
+items.sort(key=lambda item:item[1])
+print(items)
+```
+* __items.sort(key=lambda )__ After writing lambda we are telling python that we are using anonymous function and the syntax of writing anonymous function is __( key=lambda parameters:expression )__ now using this syntax we can rewrite that function which we define seperately in above example code.
+
+* In place of __parameters__ you have to write parameter that you give that seperate function and in place of __expression__ you have to write what you return from that third function.
+
+## 9. Map Function 
+
+ Let's try to understand this with example :
+
+```
+ items = [
+    ('Product',11),
+    ('Product',9),
+    ('Product',12),
+ ]
+
+ prices = []
+
+ for item in items:
+     price.append(item[1])
+
+print(prices)
+```
+Above code tells what we usually do when you when we want to iterate and append that numbers in another varibale now let's look above same thing with map function as shown below :
+
+```
+ items = [
+    ('Product',11),
+    ('Product',9),
+    ('Product',12),
+ ]
+
+ prices = []
+
+ x = map(lambda item:item[1], items)  // Using Anonymous Function
+ for item in x:
+    print(item) // Output 11, 9, 12
+
+Alternatively we can convert this map object into a list object.
+
+ prices = list(map(lambda item:item[1], items))
+ print(prices) // Output (11,9,12)
+```
+__In Map there are two parameters first function and second is iterable.__
+
+## 10. Filter Function
+
+Now let us look for filtered function which filter objects according to criteria.
+
+```
+items = [
+    ("Product",11),
+    ("Product",9),
+    ("Product",12),
+]
+
+x = filter(lambda item:item[1] >= 10, items)
+  print(x)   // A filter Object is like map object so it is iterable
+
+prices = list(filter(lambda item:item[1] >= 10, items))
+       print(prices)   // Output [('Product1',11), ('Product2',12)]  Because there prices are greater then 10$
+```
